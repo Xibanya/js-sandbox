@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Select a Character</title>
+
+    <!-- the line below calls the script that will be applied to the entire page.  You
+    can call a javascript file whenever you want but it's typical to put the calls either
+    before or after the main content. In a page generating service like Wordpress or
+    Joomla, most javascript calls will be put in the header template.  -->
+    <script type="text/javascript" src="hover.js"></script>
+
+    <!-- Ordinarily I would put the class definitions below into a separate .css file,
+    but to keep things simple I'm keeping it all here.  This page has no other styling,
+    so everything not defined will just render with browser defaults. -->
+
+    <!-- below I create two classes, hiddenborder and border -->
+    <!-- when you assign a class to an HTML element, you apply that class's style to that element -->
+    <!-- You can achieve the same effect inline by adding all the stuff to an element's style="" parameter, but
+    if several elements are going to have the same style, the page loads faster if they all just call the same class. -->
+    <!-- not to mention the HTML is easier to parse in that case. -->
+
+    <style>
+*, *:before, *:after{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.hiddenborder{
+    z-index: 2;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-style: solid;
+}
+.border{
+    z-index: 2;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    border-top: 5px solid #C70000;
+    border-left: 5px solid #C70000;
+    border-right: 5px solid #C70000;
+    border-bottom: 5px solid #C70000;
+    border-style: solid;
+}
+</style>
+</head>
+<body>
+
+<div class="table-responsive" style="margin-bottom:5em;">
+    <table style="margin-right: auto; margin-left: auto">
+        <tr>
+            <td>
+                <!-- I'm using divs instead of img elements because it's easier to manipulate divs via javascript -->
+                <div class="hiddenborder" id="fumi" style="background-image: url(http://i.imgur.com/pxkvFJW.png);"
+                     onclick="Bio(0)" onMouseOver="change(this);" onMouseOut="back(this);">
+                </div>
+            </td>
+            <td>
+                <div class="hiddenborder" id="dietrich" style="background-image: url(http://i.imgur.com/HSWN5si.png);"
+                     onclick="Bio(2)"  onMouseOver="change(this);" onMouseOut="back(this);">
+                </div>
+            </td>
+            <td>
+                <div class="hiddenborder" id="serghei" style="background-image: url(http://i.imgur.com/tMFceli.gif);"
+                     onclick="Bio(3)" onMouseOver="change(this);" onMouseOut="back(this);">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="hiddenborder" style="background-image: url(http://i.imgur.com/PwayRs3.gif);" id="bunny"
+                     onclick="Bio(1)"  onMouseOver="change(this);" onMouseOut="back(this);">
+                </div>
+            </td>
+            <td>
+                <div class="hiddenborder" style="background-image: url(http://i.imgur.com/9xecLPo.gif);" id="fulana"
+                     onclick="Bio(4)" onMouseOver="change(this);" onMouseOut="back(this);">
+                </div>
+            </td>
+            <td>
+                <div class="hiddenborder" style="background-image: url(http://i.imgur.com/UwlF2ND.png);" id="bstag"
+                     onclick="Bio(5)" onMouseOver="change(this);" onMouseOut="back(this);">
+                </div>
+            </td>
+        </tr>
+        <tr><td colspan="3"><div id="bioDiv" style="max-width:440px;"></div></td></tr>
+    </table>
+</div>
+
+<div><button id="butt" onclick="Debug()">Debug</button></div>
+
+</body>
+</html>

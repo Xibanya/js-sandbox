@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>testing</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+
+    <h1>Space Merchant</h1>
+
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <div class="well" ID="theWell">Test</div>
+    </div>
+
+    <div class="col-md-6 col-sm-6 col-xs-6" ID="HUD">
+        <div class="alert-info" style="padding:10px; margin-bottom:10px">
+            <b>Player Name:</b> <span ID="playerName">No name set</span><br>
+
+            <b>Ship:</b> <span ID="playerShipName">No name set</span><br>
+
+            <b>Faction:</b> <span ID="playerNationality">No faction set</span><br>
+
+            <b>Cash:</b> <span ID="playerCash">No cash</span><br>
+
+            <b>Fuel:</b> <span ID="playerFuel">No fuel</span><br>
+
+            <b>Cargo:</b> <span ID="playerCargo">No cargo</span><br>
+
+            <b>Condition:</b> <span ID="playerShip">No ship</span><br>
+
+            <!-- <b>Status:</b> <span ID="playerStatus">No route set</span><br> -->
+
+        </div>
+    </div> <!-- End HUD -->
+
+    <div class="row"></div>
+
+    <div ID="main">
+        <div class="form-group">
+
+            <div class="input-group" style="margin-bottom:10px">
+                <label for="texty" style="margin-right:3px">Name:</label>
+                <input class="input-sm" ID="texty"></input>
+            </div>
+
+            <div class="input-group" style="margin-bottom:10px">
+                <label for="shippy" style="margin-right:3px">Ship Name:</label>
+                <input class="input-sm" ID="shippy"></input>
+            </div>
+
+            <div class="input-group" style="margin-bottom:10px">
+                <label for="factionValue" style="margin-right: 3px">Faction: </label>
+
+                <select ID="ddlFaction" class="select input-sm" action="">
+
+                    <option value="Orbz" selected>Orbz</option>
+                    <option value="Goatworld">Goatworld</option>
+                    <option value="Space Spain">Space Spain</option>
+
+                </select>
+
+            </div>
+
+            <div class="input-group">
+                <button class="btn btn-primary btn-sm" ID="clickyButton">Begin</button>
+            </div>
+
+        </div><!-- End Form Group -->
+    </div><!-- End Main -->
+
+    <!-- <div class="col-xs-4 col-sm-4" ID="actNav"></div> -->
+
+    <div ID="subNav"></div>
+
+    <div ID="mark" class="col-xs-12"></div>
+
+    <div class="row" style="margin-top:15px">&nbsp;</div>
+
+    <script src="spaceMerchant.js"></script>
+</body>
+</html>
